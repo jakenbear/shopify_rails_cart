@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopper</title>
+    <%= csrf_meta_tags %>
+
+  </head>
+
+  <body>
+    <p>
+      <%= link_to "Home", root_path %> |
+      <%= link_to pluralize(current_cart.items_count, 'item'), cart_path %>
+    </p>
+
+    <hr />
+
+    <%= yield %>
+  </body>
+</html>
